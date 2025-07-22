@@ -17,7 +17,7 @@ jobs:
         atlas version
     - uses: tediousjs/setup-sqlserver@v2
       with:
-        sqlserver-version: '2008'
+        sqlserver-version: '2016'
         skip-os-check: true
         wait-for-ready: true
         install-updates: true
