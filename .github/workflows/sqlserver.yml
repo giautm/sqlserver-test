@@ -6,9 +6,10 @@ on:
 jobs:
   inspect:
     name: Inspect SQL Server ${{ matrix.version }}
-    runs-on: windows-2022
+    runs-on: windows-2025
     environment: dev
     strategy:
+      fail-fast: false
       matrix:
         version: ['2008','2012','2014','2016','2017','2019']
     steps:
