@@ -4,9 +4,13 @@ on:
   push:
     branches: ["master"]
 jobs:
-  build-and-deploy:
+  inspect:
+    name: Inspect SQL Server ${{ matrix.version }}
     runs-on: windows-2022
     environment: dev
+    strategy:
+      matrix:
+        version: ['2008','2012','2014','2016','2017','2019']
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v4
@@ -17,7 +21,7 @@ jobs:
         atlas version
     - uses: tediousjs/setup-sqlserver@v2
       with:
-        sqlserver-version: '2014'
+        sqlserver-version: ${{ matrix.version }}
         skip-os-check: true
         wait-for-ready: true
         install-updates: true
