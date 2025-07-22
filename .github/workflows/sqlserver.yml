@@ -11,6 +11,8 @@ jobs:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v4
     - uses: ariga/setup-atlas@master
+      with:
+        cloud-token: ${{ secrets.ATLAS_TOKEN }}
     - run:
         atlas version
     - uses: tediousjs/setup-sqlserver@v2
