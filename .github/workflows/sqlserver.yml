@@ -23,4 +23,4 @@ jobs:
         install-updates: true
         sa-password: 'P@ssw0rd0995'
     - run:
-        atlas schema inspect --url='sqlserver://sa:P%40ssw0rd0995@localhost:1434/master'
+        atlas schema inspect --url='sqlserver://sa:P%40ssw0rd0995@localhost:1433/master'
