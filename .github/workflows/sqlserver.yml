@@ -10,6 +10,7 @@ jobs:
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v4
+    - uses: ariga/setup-atlas@master
     - uses: tediousjs/setup-sqlserver@v2
       with:
         skip-os-check: false
