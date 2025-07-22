@@ -13,7 +13,7 @@ jobs:
     - uses: tediousjs/setup-sqlserver@v2
       with:
         skip-os-check: false
-        sqlserver-version: '2014'
+        sqlserver-version: '2016'
         native-client-version: ''
         odbc-version: ''
         sa-password: 'yourStrong(!)Password'
