@@ -5,7 +5,7 @@ on:
     branches: ["master"]
 jobs:
   build-and-deploy:
-    runs-on: windows-2022
+    runs-on: windows-2025
     environment: dev
     steps:
     - name: 'Checkout GitHub Action'
@@ -17,7 +17,7 @@ jobs:
         atlas version
     - uses: tediousjs/setup-sqlserver@v2
       with:
-        sqlserver-version: '2016'
+        sqlserver-version: '2014'
         skip-os-check: true
         wait-for-ready: true
         install-updates: true
