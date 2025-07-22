@@ -5,7 +5,7 @@ on:
     branches: ["master"]
 jobs:
   build-and-deploy:
-    runs-on: windows-2025
+    runs-on: windows-2022
     environment: dev
     steps:
     - name: 'Checkout GitHub Action'
