@@ -17,8 +17,8 @@ jobs:
         atlas version
     - uses: tediousjs/setup-sqlserver@v2
       with:
-        skip-os-check: false
-        sqlserver-version: '2016'
+        skip-os-check: true
+        sqlserver-version: '2008'
         native-client-version: ''
         odbc-version: ''
         sa-password: 'P@ssw0rd0995'
