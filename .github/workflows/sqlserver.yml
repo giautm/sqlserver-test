@@ -17,14 +17,10 @@ jobs:
         atlas version
     - uses: tediousjs/setup-sqlserver@v2
       with:
-        skip-os-check: true
         sqlserver-version: '2008'
-        native-client-version: ''
-        odbc-version: ''
-        sa-password: 'P@ssw0rd0995'
-        db-collation: 'SQL_Latin1_General_CP1_CI_AS'
-        install-arguments: ''
+        skip-os-check: true
         wait-for-ready: true
-        install-updates: false
+        install-updates: true
+        sa-password: 'P@ssw0rd0995'
     - run:
         atlas schema inspect --url='sqlserver://sa:P%40ssw0rd0995@localhost:1434/master'
