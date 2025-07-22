@@ -19,8 +19,10 @@ jobs:
         sqlserver-version: '2016'
         native-client-version: ''
         odbc-version: ''
-        sa-password: 'yourStrong(!)Password'
+        sa-password: 'P@ssw0rd0995'
         db-collation: 'SQL_Latin1_General_CP1_CI_AS'
         install-arguments: ''
         wait-for-ready: true
         install-updates: false
+    - run:
+        atlas schema inspect --url='sqlserver://sa:P%40ssw0rd0995@localhost:1434/master'
